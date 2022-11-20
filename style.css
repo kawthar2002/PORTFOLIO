@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  overflow: hidden;
+}
+.greeting {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #c0cad6;
+}
+.greetings-text {
+  flex: 2;
+}
+.greetings-text__content {
+  color: #0d0618;
+  font-size: 40vw;
+  cursor: default;
+}
+.greetings-image {
+  flex: 1;
+}
+.greetings-image__img {
+  width: 100%;
+}
+.name {
+  height: 100vh;
+  background-color: #632b52;
+}
+.name-text {
+  color: #fff;
+  font-size: 20vw;
+  cursor: default;
+  text-align: center;
+  line-height: 100vh;
+}
+.job-text {
+  color: #fff;
+  font-size: 8vw;
+  line-height: 100vh;
+  cursor: default;
+}
+.job {
+  height: 100vh;
+  background-color: #d4d1dc;
+}
+.dark {
+  background-color: #3f475e;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0 100px;
+  background-color: #d4d1dc;
+}
+.projects-title {
+  font-size: 10vw;
+  text-align: center;
+  color: #0d0618;
+}
+.project {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+  overflow: hidden;
+}
+.phone {
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+.screen {
+  width: 273px;
+  height: 468px;
+  background-color: #d4d1dc;
+  position: absolute;
+  top: 60px;
+  right: 14px;
+  overflow: scroll;
+}
+.screen::-webkit-scrollbar,
+.laptop-screen::-webkit-scrollbar {
+  display: none;
+}
+.phone-app {
+  width: 100%;
+}
+.project-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.project-title {
+  font-size: 7vw;
+  color: #3f475e;
+}
+.project-description {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 40px;
+  color: #3f475e;
+}
+.project-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #3f475e;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3f475e;
+  outline: none;
+}
+.project-btn::after {
+  content: 'View';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-out;
+}
+.project-btn:hover.project-btn::after {
+  transform: translateX(100%);
+  background-color: #3f475e;
+  color: #d4d1dc;
+}
+.laptop {
+  width: 678px;
+  height: 490px;
+  flex: 1;
+  position: relative;
+}
+.laptop-screen {
+  width: 505px;
+  height: 320px;
+  flex: 1;
+  position: absolute;
+  top: 21px;
+  right: 86px;
+  overflow: scroll;
+}
+.laptop-app {
+  width: 100%;
+}
+.github {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d4d1dc;
+}
+.github-title {
+  font-size: 100px;
+  color: #3f475e;
+}
+.github-chart {
+  width: 820px;
+}
+.dates {
+  padding: 10px;
+  font-size: 12px;
+  color: #c0cad6;
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.box-inner {
+  width: 15px;
+  height: 15px;
+  background-color: #3f475e;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.box:hover .box-active:nth-child(2n) {
+  background-color: #9cb0ec;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+.box:hover .box-active:nth-child(2n + 1) {
+  background-color: #637ed1;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.box-active {
+  background-color: #3f475e;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.github-link {
+  display: none;
+}
+@media screen and (max-width:1024px) {
+  .projects {
+    padding: 0 60px;
+  }
+  .project {
+    flex-direction: column;
+    gap: 10px;
+    height: max-content;
+  }
+  .project:last-child {
+    flex-direction: column-reverse;
+  }
+  .project-details {
+    gap: 10px;
+  }
+  .phone, .laptop {
+    transform: none !important;
+  }
+  .github-chart {
+    display: none;
+  }
+  .github {
+   justify-content: center;
+  }
+  .github-title {
+    font-size: 60px;
+  }
+  .github-link {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
