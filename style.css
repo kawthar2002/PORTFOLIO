@@ -3,8 +3,8 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
-.container {
-  overflow: hidden;
+a {
+  text-decoration: none;
 }
 .greeting {
   height: 100vh;
@@ -44,9 +44,13 @@
   line-height: 100vh;
   cursor: default;
 }
-.job {
+.job{
   height: 100vh;
   background-color: #d4d1dc;
+}
+.light {
+  background-image: url('./img/paw.svg');
+  background-repeat: repeat;
 }
 .dark {
   background-color: #3f475e;
@@ -161,9 +165,27 @@
   justify-content: space-around;
   background-color: #d4d1dc;
 }
+.github-header {
+  font-size: 100px;
+  color: #3f475e;
+}
 .github-title {
   font-size: 100px;
   color: #3f475e;
+  position: relative;
+}
+.github-title::before {
+  content: '';
+  bottom: 0;
+  border-bottom: 3px solid #3f475e; ;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  transition: width 0.4s ease-in-out;
+  transform: translateX(-50%);
+}
+.github-title:hover.github-title::before{
+  width: 100%;
 }
 .github-chart {
   width: 820px;
@@ -213,6 +235,9 @@
   display: none;
 }
 @media screen and (max-width:1024px) {
+  .container {
+    overflow: hidden;
+  }
   .projects {
     padding: 0 60px;
   }

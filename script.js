@@ -23,9 +23,9 @@ for (let i = 0; i < 365; i++) {
     24, 25, 65, 66, 67, 106, 107, 108, 147, 148, 149, 150, 188, 189, 229, 230,
     270, 271, 311, 312, 67, 108, 147, 148, 149, 150, 188, 189, 229, 230, 270,
     271, 311, 312, 67, 108, 149, 150, 191, 232, 274, 234, 275, 316, 194, 235,
-    276, 154, 195, 236, 73, 114, 155, 33, 34, 74, 75, 115, 116, 156, 157, 197,
+    276, 154, 195, 236, 73, 114, 155, 233, 33, 34, 74, 75, 115, 116, 156, 157, 197,
     198, 238, 239, 279, 280, 320, 321, 36, 37, 38, 39, 77, 78, 79, 80, 118, 119,
-    159, 160, 161, 162, 200, 201, 202, 203, 241, 242, 282, 283, 284, 285, 323,
+    159, 160, 161, 162, 200, 201, 202, 203, 241, 242, 282, 283, 284, 285, 323, 192,
     324, 325, 326,
   ];
 
@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
   greetnigsImg.style.transform = `translate(${offSetY * 0.3}px, ${
     offSetY * 0.7
   }px )`;
-  myName.style.transform = `translate(calc(100vh - ${offSetY}px))`;
+  myName.style.transformY = `translate(calc(-100vh + ${offSetY}px))`;
   job[1].style.backgroundPositionY = `${-offSetY * 0.5}px`;
   job[0].style.backgroundPositionY = `${offSetY * 0.5}px`;
   jobText[0].style.transform = `translateX(calc(200vh - ${offSetY}px))`;
