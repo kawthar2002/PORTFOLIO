@@ -44,9 +44,9 @@ a {
   line-height: 100vh;
   cursor: default;
 }
-.job{
+.job {
   height: 100vh;
-  background-color: #d4d1dc;
+  background-color: #ada7be;
 }
 .light {
   background-image: url('./img/paw.svg');
@@ -60,7 +60,9 @@ a {
   flex-direction: column;
   gap: 30vh;
   padding: 0 100px;
-  background-color: #d4d1dc;
+  background-color: #cabeea;
+  background-image: url('./img/pawWhite.svg');
+  background-repeat: repeat;
 }
 .projects-title {
   font-size: 10vw;
@@ -87,6 +89,9 @@ a {
   top: 60px;
   right: 14px;
   overflow: scroll;
+}
+.laptop-img {
+  width: 100%;
 }
 .screen::-webkit-scrollbar,
 .laptop-screen::-webkit-scrollbar {
@@ -146,12 +151,12 @@ a {
   position: relative;
 }
 .laptop-screen {
-  width: 505px;
-  height: 320px;
+  width: 454px;
+  height: 286px;
   flex: 1;
   position: absolute;
-  top: 21px;
-  right: 86px;
+  top: 18px;
+  right: 78px;
   overflow: scroll;
 }
 .laptop-app {
@@ -164,10 +169,12 @@ a {
   align-items: center;
   justify-content: space-around;
   background-color: #d4d1dc;
+
 }
 .github-header {
-  font-size: 100px;
+  font-size: 10vh;
   color: #3f475e;
+  text-align: center;
 }
 .github-title {
   font-size: 100px;
@@ -177,14 +184,14 @@ a {
 .github-title::before {
   content: '';
   bottom: 0;
-  border-bottom: 3px solid #3f475e; ;
+  border-bottom: 3px solid #3f475e;
   width: 0%;
   left: 50%;
   position: absolute;
   transition: width 0.4s ease-in-out;
   transform: translateX(-50%);
 }
-.github-title:hover.github-title::before{
+.github-title:hover.github-title::before {
   width: 100%;
 }
 .github-chart {
@@ -214,7 +221,7 @@ a {
   width: 15px;
   height: 15px;
   border-radius: 2px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 .box:hover .box-active:nth-child(2n + 1) {
@@ -234,12 +241,12 @@ a {
 .github-link {
   display: none;
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .container {
     overflow: hidden;
   }
   .projects {
-    padding: 0 60px;
+    padding: 0 20px;
   }
   .project {
     flex-direction: column;
@@ -252,14 +259,15 @@ a {
   .project-details {
     gap: 10px;
   }
-  .phone, .laptop {
+  .phone,
+  .laptop {
     transform: none !important;
   }
   .github-chart {
     display: none;
   }
   .github {
-   justify-content: center;
+    justify-content: center;
   }
   .github-title {
     font-size: 60px;
@@ -268,5 +276,17 @@ a {
     display: flex;
     align-items: center;
     margin-top: 30px;
+  }
+  .laptop {
+    width: 342px;
+    height: 200px;
+    flex: 1;
+    position: relative;
+  }
+  .laptop-screen {
+    width: 256px;
+    height: 160px;
+    top: 10px;
+    right: 43px;
   }
 }
